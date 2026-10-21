@@ -1,0 +1,67 @@
+/* Shared surfaces and readable controls in both themes. */
+:root{--surface:#fff;--surface-raised:#f1f3fa;--text:#252752;--subtext:#505970;--edge:#ccd1e0;--link:#4338a0;--kids-bg:#fff0b2;--kids-text:#49390c;--kids-edge:#a57a12;--adult-bg:#d5f2e3;--adult-text:#124d37;--adult-edge:#378261}
+html[data-theme="dark"]{--surface:#20243a;--surface-raised:#292f48;--text:#f5f5f7;--subtext:#d5d5dc;--muted:#c8c8d0;--edge:#58617d;--link:#ddd4ff;--kids-bg:#483a1a;--kids-text:#ffecb2;--kids-edge:#c8a34b;--adult-bg:#1b4033;--adult-text:#cbf5df;--adult-edge:#58b58c}
+html .btn.primary{background:#ffd166;color:#28243d;border:1px solid #b08727}
+html .btn.outline{background:var(--surface-raised);color:var(--text);border-color:var(--edge)}
+html .btn:focus-visible,html button:focus-visible,html a:focus-visible,html select:focus-visible,html input:focus-visible{outline:3px solid var(--link);outline-offset:3px}
+html .btn:disabled{cursor:not-allowed;transform:none}
+html .rulebook-summary{border-radius:18px}
+html .rulebook-goal,html .rulebook-step,html .standard-legal,html .rulebook-note{border-radius:14px;border:1px solid var(--edge);background:var(--surface-raised);color:var(--text)}
+html .rulebook-step{padding:16px;min-width:0}
+html .rulebook-goal strong,html .standard-legal strong,html .rulebook-step h3{color:var(--text)}
+html .rulebook-goal p,html .standard-legal p,html .rulebook-step p,html .rulebook-note{color:var(--subtext)}
+html .standard-legal a{color:var(--link)}
+html .rulebook-step>span,html .rulebook-step:nth-child(2)>span,html .rulebook-step:nth-child(3)>span{background:#5148a8;color:#fff}
+html .home-tournament-option.kids,html .interest-option.kids{background:var(--kids-bg);border-color:var(--kids-edge);color:var(--kids-text)}
+html .home-tournament-option.adult,html .interest-option.adult{background:var(--adult-bg);border-color:var(--adult-edge);color:var(--adult-text)}
+html[data-theme] .home-tournament-option.kids h3{color:var(--kids-text)}
+html[data-theme] .home-tournament-option.adult h3{color:var(--adult-text)}
+html[data-theme="dark"] .home-tournament-option.kids{background:var(--kids-bg);border-color:var(--kids-edge)}
+html[data-theme="dark"] .home-tournament-option.adult{background:var(--adult-bg);border-color:var(--adult-edge)}
+html[data-theme="dark"] .division-tabs .division-tab-junior{background:var(--kids-bg);border-color:var(--kids-edge);color:var(--kids-text)}
+html[data-theme="dark"] .division-tabs .division-tab-adult{background:var(--adult-bg);border-color:var(--adult-edge);color:var(--adult-text)}
+html[data-theme="dark"] .division-tabs .division-tab-junior.active{background:#ffd166;color:#28243d;border-color:#ffe4a1;box-shadow:0 0 0 2px #ffd16655}
+html[data-theme="dark"] .division-tabs .division-tab-adult.active{background:#7bd9ad;color:#113c2a;border-color:#b5f1d3;box-shadow:0 0 0 2px #7bd9ad55}
+html .interest-heading strong,html .loan-deck-box h3{color:var(--text)}
+html .interest-box>small,html .division-help,html .loan-admin-row small{color:var(--subtext)}
+html .interest-option{min-width:0;min-height:130px;border-width:2px;border-radius:14px}
+html .interest-option [id^=interestState]{color:inherit;font-size:14px;padding-top:6px;border-top:1px solid currentColor}
+html .interest-option[aria-pressed=true]{box-shadow:inset 0 0 0 2px currentColor}
+html .interest-option[aria-busy=true]{cursor:progress}
+html .interest-feedback{padding:12px 14px;margin:12px 0 0!important;border-radius:12px;border:1px solid var(--edge);background:var(--surface-raised);color:var(--text)!important;font-size:14px!important}
+html .interest-feedback[data-error=true]{border-color:#cc6479;color:#9a213b!important;background:#fff0f3}
+html[data-theme="dark"] .interest-feedback[data-error=true]{background:#482a37;color:#ffe2e9!important}
+html .admin-rewind-controls,html .interest-admin{background:var(--surface-raised);border:1px solid var(--edge);color:var(--text)}
+html .admin-rewind-controls label,html .admin-round-count,html .admin-eyebrow,html .admin-correction{color:var(--subtext)}
+html[data-theme="dark"] .admin-page-title h3{color:var(--text)}
+html .delete{color:#922d42;background:#ffe5eb;min-width:44px;width:auto;padding:8px 12px;height:auto}
+html[data-theme="dark"] .delete{background:#4a2b38;color:#ffe1e6;border:1px solid #a46476}
+html[data-theme="dark"] .player-chip button,html[data-theme="dark"] .player-chip .player-edit{color:#ddd8ff}
+html[data-theme="dark"] .admin-person .move-player{background:var(--surface-raised);color:var(--text);border-color:var(--edge)}
+html[data-theme="dark"] .loan-admin-list,html[data-theme="dark"] .loan-admin-row,html[data-theme="dark"] .admin-participants{border-color:var(--edge)}
+html[data-theme="dark"] .admin-participants summary:after,html[data-theme="dark"] .admin-participants summary span{background:#343953;color:#eeeaff}
+html[data-theme="dark"] .bracket-empty{box-shadow:none}
+html[data-theme="dark"] .loan-deck-card small{color:var(--subtext)}
+html[data-theme="dark"] .interest-heading strong,html[data-theme="dark"] .loan-deck-box h3,html[data-theme="dark"] .loan-deck-card h4,html[data-theme="dark"] .admin-page-title h3,html[data-theme="dark"] .interest-admin strong,html[data-theme="dark"] .rulebook-goal strong,html[data-theme="dark"] .standard-legal strong{color:var(--text)}
+html[data-theme="dark"] .welcome-card p,html[data-theme="dark"] .card p,html[data-theme="dark"] .field label,html[data-theme="dark"] .admin-intro,html[data-theme="dark"] .admin-page-help,html[data-theme="dark"] .admin-eyebrow,html[data-theme="dark"] .admin-round-count,html[data-theme="dark"] .loan-deck-box>small,html[data-theme="dark"] .interest-box>small,html[data-theme="dark"] .division-help,html[data-theme="dark"] .register-note,html[data-theme="dark"] .empty,html[data-theme="dark"] .footer{color:var(--subtext)}
+html .admin-head-actions .admin-logout{min-height:44px;border:1px solid var(--edge)}
+html[data-theme] .home-event-block{background:transparent;border:0;border-top:1px solid var(--edge);border-radius:0;padding:16px 0 0;margin-top:18px}
+html[data-theme] .home-date-line{background:transparent!important;border:0!important;padding:0!important}
+html[data-theme] .home-date-line strong{display:inline;background:transparent!important;border:0!important;padding:0!important;border-radius:0!important;color:var(--text);font-size:15px}
+@media(max-width:600px){html .rulebook-step{padding:12px;gap:10px}html .interest-feedback{overflow-wrap:anywhere}html .admin-head-actions{flex-wrap:wrap;justify-content:flex-end}}
+
+.login-actions{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 18px}.login-actions .btn{min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere}.loginbox .input{min-width:0;max-width:100%;box-sizing:border-box}.loginbox .register-note{margin-top:16px}
+
+#rulesView > .section-head{justify-content:flex-start;text-align:left}
+#rulesView > .section-head > div{width:100%}
+
+.standard-rule-links{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:14px}
+html .standard-rule-links > a:not(.btn){color:var(--link)}
+.standard-rule-links .rulebook-link{margin:0}
+
+/* Public page heading hierarchy; admin labels and round headings retain their own sizes. */
+#homeView .welcome-card,#rulesView > .section-head,#eventView > .section-head,#tournamentView > .section-head{text-align:left}
+#rulesView > .section-head,#eventView > .section-head,#tournamentView > .section-head{align-items:flex-start;justify-content:flex-start;margin:0 0 20px}
+#homeView .welcome-card h2,#rulesView > .section-head h2,#eventView > .section-head h2,#tournamentView > .section-head h2{font-size:clamp(25px,4vw,32px);line-height:1.18;letter-spacing:-.035em;margin:0 0 8px;overflow-wrap:break-word}
+#homeView .welcome-kicker{margin:0 0 12px}
+#homeView .welcome-card p,#rulesView > .section-head p,#eventView > .section-head p,#tournamentView > .section-head p{font-size:15px;line-height:1.5;margin:0;color:var(--subtext)}
